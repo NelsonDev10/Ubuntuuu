@@ -1,0 +1,334 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    background: linear-gradient(135deg, #8B4513 0%, #CD853F 50%, #DEB887 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(205, 133, 63, 0.3) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.login-container {
+    position: relative;
+    width: 400px;
+    max-width: 90vw;
+}
+
+.vintage-frame {
+    background: linear-gradient(145deg, #F5E6D3, #E8D5C4);
+    border: 3px solid #8B4513;
+    border-radius: 15px;
+    padding: 40px 35px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        inset 0 2px 4px rgba(255, 255, 255, 0.3),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.vintage-frame::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid #CD853F;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.vintage-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #5D4037;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.decorative-line {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #8B4513, transparent);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.login-form {
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.vintage-label {
+    display: block;
+    color: #5D4037;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.vintage-input {
+    width: 100%;
+    padding: 12px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #CD853F;
+    font-size: 1.1rem;
+    color: #5D4037;
+    font-family: 'Crimson Text', serif;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.vintage-input:focus {
+    border-bottom-color: #8B4513;
+}
+
+.vintage-input:focus + .input-underline,
+.vintage-input:valid + .input-underline {
+    transform: scaleX(1);
+}
+
+.input-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #8B4513, #CD853F);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    color: #5D4037;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container input {
+    display: none;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #CD853F;
+    border-radius: 3px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.checkbox-container input:checked + .checkmark {
+    background: #8B4513;
+    border-color: #8B4513;
+}
+
+.checkbox-container input:checked + .checkmark::after {
+    content: '✓';
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.forgot-link {
+    color: #8B4513;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+    color: #5D4037;
+    text-decoration: underline;
+}
+
+.vintage-button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(145deg, #CD853F, #8B4513);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Crimson Text', serif;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 15px rgba(139, 69, 19, 0.3);
+}
+
+.vintage-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.4);
+}
+
+.vintage-button:active {
+    transform: translateY(0);
+}
+
+.button-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.vintage-button:hover .button-shine {
+    left: 100%;
+}
+
+.login-footer {
+    text-align: center;
+    color: #5D4037;
+    font-size: 0.9rem;
+}
+
+.register-link {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.register-link:hover {
+    color: #5D4037;
+    text-decoration: underline;
+}
+
+.vintage-ornaments {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.ornament {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #8B4513;
+    opacity: 0.3;
+}
+
+.ornament.top-left {
+    top: -15px;
+    left: -15px;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 15px 0 0 0;
+}
+
+.ornament.top-right {
+    top: -15px;
+    right: -15px;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0 15px 0 0;
+}
+
+.ornament.bottom-left {
+    bottom: -15px;
+    left: -15px;
+    border-right: none;
+    border-top: none;
+    border-radius: 0 0 0 15px;
+}
+
+.ornament.bottom-right {
+    bottom: -15px;
+    right: -15px;
+    border-left: none;
+    border-top: none;
+    border-radius: 0 0 15px 0;
+}
+
+/* Animaciones y efectos adicionales */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.vintage-frame {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .vintage-frame {
+        padding: 30px 25px;
+    }
+    
+    .vintage-title {
+        font-size: 2rem;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

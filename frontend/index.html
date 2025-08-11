@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="vintage-frame">
+            <div class="login-header">
+                <h1 class="vintage-title">Bienvenido</h1>
+                <div class="decorative-line"></div>
+            </div>
+            
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="username" class="vintage-label">Usuario</label>
+                    <input type="text" id="username" name="username" class="vintage-input" required>
+                    <div class="input-underline"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="vintage-label">Contraseña</label>
+                    <input type="password" id="password" name="password" class="vintage-input" required>
+                    <div class="input-underline"></div>
+                </div>
+                
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="remember">
+                        <span class="checkmark"></span>
+                        Recordarme
+                    </label>
+                    
+                    <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                </div>
+                
+                <button type="submit" class="vintage-button">
+                    <span class="button-text">Iniciar Sesión</span>
+                    <div class="button-shine"></div>
+                </button>
+            </form>
+            
+            <div class="login-footer">
+                <p>¿No tienes cuenta? <a href="#" class="register-link">Regístrate aquí</a></p>
+            </div>
+        </div>
+        
+        <div class="vintage-ornaments">
+            <div class="ornament top-left"></div>
+            <div class="ornament top-right"></div>
+            <div class="ornament bottom-left"></div>
+            <div class="ornament bottom-right"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
